@@ -7,10 +7,7 @@
     <!-- Script de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Desplazamiento suave al hacer clic en el menú */
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
         .hover-zoom {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -20,10 +17,10 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800">
+<body class="bg-white font-sans text-slate-800">
 
-    <!-- MENÚ SUPERIOR (Navegación) -->
-    <nav class="bg-gray-100 border-b border-gray-200 py-4 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center sticky top-0 z-50 shadow-sm">
+    <!-- MENÚ SUPERIOR -->
+    <nav class="bg-gray-50 border-b border-gray-200 py-4 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center sticky top-0 z-50 shadow-sm">
         <ul class="flex flex-wrap justify-center gap-6 md:gap-8 font-medium text-slate-700 mb-4 md:mb-0">
             <li><a href="#acerca" class="hover:text-orange-600 transition">Acerca de mí</a></li>
             <li><a href="#facilidades" class="hover:text-orange-600 transition">Facilidades</a></li>
@@ -33,15 +30,20 @@
         </ul>
         
         <!-- Redes Sociales -->
-        <div class="flex items-center gap-4 text-slate-700">
-            <span class="font-medium mr-2">Compartir:</span>
-            <!-- Icono Correo/Arroba -->
-            <a href="#" class="text-2xl hover:text-orange-600 transition font-bold">@</a>
-            <!-- Icono Facebook -->
-            <a href="#" class="text-2xl hover:text-orange-600 transition font-bold">f</a>
-            <!-- Icono X (Twitter) -->
-            <a href="#" class="hover:text-orange-600 transition">
+        <div class="flex items-center gap-5 text-slate-700">
+            <span class="font-medium mr-1">Compartir:</span>
+            
+            <!-- Icono WhatsApp -->
+            <a href="https://wa.me/529511234567" target="_blank" class="hover:text-green-500 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                </svg>
+            </a>
+            <!-- Icono Facebook -->
+            <a href="#" class="text-xl hover:text-blue-600 transition font-bold">f</a>
+            <!-- Icono X (Twitter) -->
+            <a href="#" class="hover:text-gray-900 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M12.6.5h2.45l-5.36 6.14L15.65 15.5h-4.66l-3.65-4.77-4.15 4.77H.74l5.68-6.5L1 .5h4.78l3.3 4.38L12.6.5zm-1.04 13.5h1.36L4.54 1.8H3.08l8.48 12.2z"/>
                 </svg>
             </a>
@@ -69,25 +71,61 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: FACILIDADES -->
-    <section id="facilidades" class="bg-gray-100 py-16 mt-12 pt-20">
-        <div class="max-w-6xl mx-auto p-6 md:p-8">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold border-b-4 border-orange-500 inline-block pb-2">Nuestras Facilidades</h2>
+    <!-- NUEVA SECCIÓN: FACILIDADES (Estilo Minimalista con Iconos) -->
+    <section id="facilidades" class="max-w-5xl mx-auto p-6 md:p-8 mt-4 pt-20">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-slate-900">Facilidades</h2>
+        </div>
+        
+        <!-- Cuadrícula de Iconos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
+            
+            <!-- Item 1: Reloj -->
+            <div class="flex items-center gap-5">
+                <div class="w-14 h-14 flex-shrink-0 border-[1.5px] border-slate-900 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <span class="text-slate-800 text-lg">Disponibilidad<br>las 24 horas</span>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Asesoría Técnica</h3>
-                    <p class="text-gray-600">Te guiamos para que lleves la refacción exacta que tu proyecto demanda.</p>
+
+            <!-- Item 2: Aparcamiento (P) -->
+            <div class="flex items-center gap-5">
+                <div class="w-14 h-14 flex-shrink-0 border-[1.5px] border-slate-900 rounded-full flex items-center justify-center bg-white">
+                    <span class="font-bold text-xl text-slate-900">P</span>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Garantía de Calidad</h3>
-                    <p class="text-gray-600">Trabajamos solo con marcas reconocidas para asegurar la durabilidad.</p>
+                <span class="text-slate-800 text-lg">Aparcamiento<br>disponible</span>
+            </div>
+
+            <!-- Item 3: Estrella (Adaptado) -->
+            <div class="flex items-center gap-5">
+                <div class="w-14 h-14 flex-shrink-0 border-[1.5px] border-slate-900 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-slate-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Facturación Rápida</h3>
-                    <p class="text-gray-600">Sistema optimizado para entregar tus comprobantes fiscales al instante.</p>
+                <span class="text-slate-800 text-lg">Garantía en<br>piezas</span>
+            </div>
+
+            <!-- Item 4: Estrella -->
+            <div class="flex items-center gap-5">
+                <div class="w-14 h-14 flex-shrink-0 border-[1.5px] border-slate-900 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-slate-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                 </div>
+                <span class="text-slate-800 text-lg">Consulta<br>gratuita</span>
+            </div>
+
+            <!-- Item 5: Estrella (Adaptado) -->
+            <div class="flex items-center gap-5">
+                <div class="w-14 h-14 flex-shrink-0 border-[1.5px] border-slate-900 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-slate-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="text-slate-800 text-lg">Asesoría<br>técnica</span>
+            </div>
+
+            <!-- Item 6: Estrella -->
+            <div class="flex items-center gap-5">
+                <div class="w-14 h-14 flex-shrink-0 border-[1.5px] border-slate-900 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-slate-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="text-slate-800 text-lg leading-snug">Se aceptan tarjetas de<br>crédito y débito</span>
             </div>
         </div>
     </section>
@@ -125,15 +163,14 @@
         </div>
     </main>
 
-    <!-- SECCIÓN: UBICACIÓN (Con imagen horizontal enorme) -->
+    <!-- SECCIÓN: UBICACIÓN -->
     <section id="ubicacion" class="max-w-6xl mx-auto p-6 md:p-8 mt-12 pt-20">
         <div class="text-center mb-8">
             <h2 class="text-3xl font-bold border-b-4 border-orange-500 inline-block pb-2">Nuestra Ubicación</h2>
             <p class="text-gray-600 mt-4 text-lg">Visítanos en nuestra sucursal. Tenemos amplio estacionamiento.</p>
         </div>
         
-        <!-- CONTENEDOR DE LA IMAGEN HORIZONTAL GIGANTE -->
-        <div class="w-full h-80 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl mb-8 border-4 border-white">
+        <div class="w-full h-80 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl mb-8 border-4 border-white bg-gray-200 flex items-center justify-center">
             <!-- AQUÍ VA TU IMAGEN DE UBICACIÓN -->
             <img src="imagenes/ubicacion.jpg" alt="Fachada de la Refaccionaria" class="w-full h-full object-cover">
         </div>

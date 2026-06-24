@@ -3,64 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Digital | Refacciones y Herramientas</title>
+    <title>Catálogo Digital | Soluciones y Refacciones</title>
+    <!-- Script de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Animaciones dinámicas */
-        .hover-zoom { transition: transform 0.3s ease-in-out; }
-        .hover-zoom:hover { transform: scale(1.03); }
-        .fade-in { animation: fadeIn 1.2s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        /* Animación suave al pasar el ratón sobre las tarjetas */
+        .hover-zoom {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-zoom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
     </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
-    
-    <header class="bg-slate-900 text-white p-12 text-center fade-in shadow-md">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-orange-500">Soluciones y Refacciones</h1>
-        <p class="text-lg md:text-xl mb-8 text-gray-300">Calidad, resistencia y precisión para cada uno de tus proyectos.</p>
-        <a href="#catalogo" class="bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">Ver Catálogo Digital</a>
+<body class="bg-slate-50 font-sans">
+
+    <!-- Sección del Encabezado (Header) -->
+    <header class="bg-slate-900 text-white text-center py-16 px-4 shadow-md">
+        <h1 class="text-5xl font-extrabold text-orange-500 mb-4 tracking-tight">Soluciones y Refacciones</h1>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Calidad, resistencia y precisión para cada uno de tus proyectos.</p>
+        <a href="#catalogo" class="bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg shadow-lg">
+            Ver Catálogo Digital
+        </a>
     </header>
 
-    <main id="catalogo" class="max-w-6xl mx-auto p-8 mt-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold border-b-4 border-orange-500 inline-block pb-2">Productos Destacados</h2>
+    <!-- Sección Principal de Productos -->
+    <main id="catalogo" class="max-w-6xl mx-auto p-6 md:p-8 mt-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold border-b-4 border-orange-500 inline-block pb-2 text-slate-900">Productos Destacados</h2>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-zoom border border-gray-100">
-                <img src="imagenes/taladro.jpg" alt="Herramientas Manuales" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2 text-slate-800">Kit de Herramientas</h3>
-                    <p class="text-gray-600 mb-4 h-16">Todo lo necesario para reparaciones residenciales e industriales con la máxima durabilidad.</p>
-                    <a href="https://wa.me/529514352968?text=Hola,%20me%20interesa%20solicitar%20una%20cotizaci%C3%B3n%20sobre%20el%20Kit%20de%20Herramientas." target="_blank" class="block text-center w-full bg-slate-800 text-white font-bold py-2 rounded hover:bg-slate-700 transition">Solicitar Cotización</a>
+
+        <!-- Contenedor Flex para las Tarjetas Horizontales -->
+        <div class="flex flex-col gap-12">
+
+            <!-- TARJETA 1 (Imagen a la Izquierda) -->
+            <div class="flex flex-col md:flex-row bg-white rounded-2xl shadow-lg overflow-hidden hover-zoom border border-gray-100">
+                <div class="md:w-1/2 h-72 md:h-auto">
+                    <!-- Recuerda tener una foto llamada refaccion1.jpg en tu carpeta imagenes -->
+                    <img src="imagenes/refaccion1.jpg" alt="Kit de Herramientas" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <h3 class="text-3xl font-bold text-slate-900 mb-4">Kit de Herramientas Manuales</h3>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">Todo lo necesario para reparaciones residenciales e industriales con la máxima durabilidad. Contamos con las mejores marcas para asegurar precisión en tu trabajo diario.</p>
+                    <a href="#" class="bg-slate-900 text-white text-center font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition duration-300 w-fit shadow-md">
+                        Solicitar Cotización
+                    </a>
                 </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-zoom border border-gray-100">
-                <img src="imagenes/refaccion.jpg" alt="Refacciones y Componentes" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2 text-slate-800">Componentes y Refacciones</h3>
-                    <p class="text-gray-600 mb-4 h-16">Piezas de repuesto exactas para mantener tu equipo o vehículo funcionando al 100%.</p>
-                    <a href="https://wa.me/529514352968?text=Hola,%20me%20interesa%20solicitar%20una%20cotizaci%C3%B3n%20sobre%20los%20Componentes%20y%20Refacciones." target="_blank" class="block text-center w-full bg-slate-800 text-white font-bold py-2 rounded hover:bg-slate-700 transition">Solicitar Cotización</a>
+            <!-- TARJETA 2 (Imagen a la Derecha - Invertida) -->
+            <div class="flex flex-col md:flex-row-reverse bg-white rounded-2xl shadow-lg overflow-hidden hover-zoom border border-gray-100">
+                <div class="md:w-1/2 h-72 md:h-auto">
+                    <!-- Recuerda tener una foto llamada refaccion2.jpg en tu carpeta imagenes -->
+                    <img src="imagenes/refaccion2.jpg" alt="Componentes Eléctricos" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <h3 class="text-3xl font-bold text-slate-900 mb-4">Material Eléctrico</h3>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">Multímetros, cableado y componentes esenciales para un diagnóstico seguro. Protege tus instalaciones con equipo certificado y de la más alta calidad.</p>
+                    <a href="#" class="bg-slate-900 text-white text-center font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition duration-300 w-fit shadow-md">
+                        Solicitar Cotización
+                    </a>
                 </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-zoom border border-gray-100">
-                <img src="imagenes/multimetro.jpg" alt="Material Eléctrico" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2 text-slate-800">Material Eléctrico</h3>
-                    <p class="text-gray-600 mb-4 h-16">Multímetros, cableado y componentes esenciales para un diagnóstico seguro.</p>
-                    <a href="https://wa.me/529514352968?text=Hola,%20me%20interesa%20solicitar%20una%20cotizaci%C3%B3n%20sobre%20el%20Material%20El%C3%A9ctrico." target="_blank" class="block text-center w-full bg-slate-800 text-white font-bold py-2 rounded hover:bg-slate-700 transition">Solicitar Cotización</a>
+            <!-- TARJETA 3 (Imagen a la Izquierda) -->
+            <div class="flex flex-col md:flex-row bg-white rounded-2xl shadow-lg overflow-hidden hover-zoom border border-gray-100">
+                <div class="md:w-1/2 h-72 md:h-auto">
+                    <!-- Recuerda tener una foto llamada refaccion3.jpg en tu carpeta imagenes -->
+                    <img src="imagenes/refaccion3.jpg" alt="Componentes y Refacciones" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <h3 class="text-3xl font-bold text-slate-900 mb-4">Componentes y Refacciones</h3>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">Piezas de repuesto exactas para mantener tu equipo o maquinaria funcionando al 100%. Encuentra la pieza específica que necesitas con nosotros.</p>
+                    <a href="#" class="bg-slate-900 text-white text-center font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition duration-300 w-fit shadow-md">
+                        Solicitar Cotización
+                    </a>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <footer class="bg-slate-900 text-white text-center p-8 mt-12">
-        <p class="font-semibold">&copy; 2026 Refacciones y Soluciones. Todos los derechos reservados.</p>
-        <p class="text-sm text-gray-400 mt-2">Atención profesional para tus proyectos.</p>
+    <!-- Pie de página (Footer) -->
+    <footer class="bg-slate-900 text-gray-400 text-center py-8 mt-16 border-t border-slate-800">
+        <p>&copy; 2026 Soluciones y Refacciones. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
